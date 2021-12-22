@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/design_square"
+    android:padding="5dp">
+
+
+    <ImageView
+        android:id="@+id/imgSanphamrow"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/txvTenSprow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Nuoc tay trang"
+        app:layout_constraintEnd_toEndOf="@+id/imgSanphamrow"
+        app:layout_constraintStart_toStartOf="@+id/imgSanphamrow"
+        app:layout_constraintTop_toBottomOf="@+id/imgSanphamrow" />
+
+    <TextView
+        android:id="@+id/txvGiasaugiamrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="đ 315.000"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/txvTenSprow"
+        app:layout_constraintTop_toBottomOf="@+id/txvTenSprow" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvGiasaugiamrow"
+        app:layout_constraintTop_toBottomOf="@+id/txvGiasaugiamrow"
+        app:srcCompat="@drawable/ic_school_bus" />
+
+    <TextView
+        android:id="@+id/txvSoluongbanrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="Đã bán 80"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView18"
+        app:layout_constraintStart_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+    <ImageView
+        android:id="@+id/imgStar"
+        android:layout_width="30dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txvSoluongbanrow"
+        app:layout_constraintEnd_toStartOf="@+id/txvSoluongbanrow"
+        app:layout_constraintTop_toTopOf="@+id/txvSoluongbanrow"
+        app:srcCompat="@drawable/threestar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

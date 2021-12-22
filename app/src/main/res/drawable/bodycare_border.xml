@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item >
+    <shape android:shape="rectangle"
+        >
+        <stroke android:color="@color/color_main"
+            android:width="2dp"/>
+
+    </shape>
+</item>
+    <item android:width="50dp"
+        android:height="50dp">
+        <bitmap android:src="@drawable/bodycare"/>
+    </item>
+</layer-list>

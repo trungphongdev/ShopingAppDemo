@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgbackchat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:onClick="handlerBackChat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/angle_double_left" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_profilechat"
+        android:layout_width="0dp"
+        android:padding="7dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imgbackchat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/design_border"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfilechat"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/trang"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="Trang2000.bt \n Online 8 tiếng trước"
+            app:layout_constraintStart_toEndOf="@id/imgProfilechat"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_profilechat"
+        >
+
+        <TextView
+            android:id="@+id/txvtime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="09:29 26-11-2021"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvchat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/desgin_chatright"
+            android:fontFamily="@font/roboto"
+            android:padding="10dp"
+            android:text="Chào shop, shop cho em hỏi là sản phẩm này có \n được kiểm hàng trước không"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvtime1" />
+
+        <TextView
+            android:id="@+id/txvtime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="09:30 26-11-2021"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvchat1" />
+
+        <TextView
+            android:id="@+id/txvchat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/desgin_chatleft"
+            android:fontFamily="@font/roboto"
+            android:padding="12dp"
+            android:text="Chào bạn, sản phẩm bên mình có được kiểm hàng trước bạn nhé"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvtime2" />
+
+        <TextView
+            android:id="@+id/txvtime3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="9:31 26-11-2021"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvchat2" />
+
+        <TextView
+            android:id="@+id/txvchat3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/desgin_chatleft"
+            android:fontFamily="@font/roboto"
+            android:padding="12dp"
+            android:text="Khi kiểm hàng bạn nhớ quay video lại giúp shop với ạ, để đảm bảo việc hàng đúng /n của shop"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvtime3" />
+
+        <TextView
+            android:id="@+id/txvtime4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="9:32 26-11-20221"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvchat3" />
+
+        <TextView
+
+            android:id="@+id/txvchat4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/desgin_chatright"
+            android:fontFamily="@font/roboto"
+            android:padding="12dp"
+            android:text="Dạ vâng shop. Cảm ơn shop"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvtime4" />
+
+        <TextView
+            android:id="@+id/txvtime5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="9:33 - 26-11-2021"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvchat4" />
+
+        <TextView
+            android:id="@+id/txvchat5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/desgin_chatleft"
+            android:fontFamily="@font/roboto"
+            android:padding="12dp"
+            android:text="Ok bạn Chúc bạn 1 ngày vui"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvtime5" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/edtChat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/desgin_edittext"
+        android:drawableEnd="@drawable/paper_plane"
+        android:fontFamily="@font/roboto"
+        android:hint="Soạn tin nhắn..."
+        android:padding="7dp"
+        android:textColorHint="@color/color_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

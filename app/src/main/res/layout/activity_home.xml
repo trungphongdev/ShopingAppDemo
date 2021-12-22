@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".HomeActivity">
+
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/desgin_edittext"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/roboto"
+        android:hint="Nhập để tìm kiếm"
+        android:onClick="timkiemsp"
+        android:textColorHint="@color/color_main"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+
+        android:id="@+id/imageView9"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shopping_cart"
+        android:onClick="giohang"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAnh"
+        app:layout_constraintEnd_toStartOf="@+id/imgchat"
+        app:layout_constraintTop_toTopOf="@+id/imgAnh"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+
+        android:id="@+id/imgchat"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="chatShop"
+        android:src="@drawable/comment"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layouthome1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/nav_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/layoutbanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/desgin_edittext"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtSearch">
+
+            <ImageView
+                android:id="@+id/imageBannerHome"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bannerhom3"
+                app:layout_constraintDimensionRatio="w,16:9" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txvCategoryItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+
+            android:fontFamily="@font/roboto"
+            android:text="Danh mục sản phẩm "
+            android:textColor="@color/color_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutbanner" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutCategoryItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/design_border"
+            android:padding="7dp"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvCategoryItem">
+
+            <ImageView
+                android:id="@+id/imgMakeup3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="handlerDanhmuc"
+                android:src="@drawable/bodycare_border"
+                app:layout_constraintEnd_toStartOf="@+id/imgMakeup"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgMakeup2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgMakeup4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="handlerDanhmuc"
+                android:src="@drawable/makeup_border"
+                app:layout_constraintEnd_toStartOf="@+id/imgMakeup2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgMakeup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handlerDanhmuc"
+                android:src="@drawable/skincare_border"
+                app:layout_constraintEnd_toStartOf="@+id/imgMakeup3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgMakeup4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvBodycare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+
+                android:text="Skincare"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imgMakeup2"
+                app:layout_constraintStart_toStartOf="@+id/imgMakeup2"
+                app:layout_constraintTop_toBottomOf="@+id/imgMakeup2" />
+
+            <TextView
+                android:id="@+id/txvHairCare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+
+                android:text="Haircare"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imgMakeup"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/imgMakeup"
+                app:layout_constraintTop_toBottomOf="@+id/imgMakeup" />
+
+            <ImageView
+                android:id="@+id/imgMakeup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handlerDanhmuc"
+                android:src="@drawable/haircare_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgMakeup3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvMakeup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+
+                android:text="Bodycare"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imgMakeup3"
+                app:layout_constraintStart_toStartOf="@+id/imgMakeup3"
+                app:layout_constraintTop_toBottomOf="@+id/imgMakeup3" />
+
+            <TextView
+
+                android:id="@+id/txvSkincare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="Make up"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imgMakeup4"
+                app:layout_constraintStart_toStartOf="@+id/imgMakeup4"
+                app:layout_constraintTop_toBottomOf="@+id/imgMakeup4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txvFamousItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="THƯƠNG HIỆU NỔI BẬT"
+            android:textColor="@color/color_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutCategoryItem" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutFamousItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/design_trendbanner1"
+            android:padding="7dp"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvFamousItem">
+
+            <TextView
+                android:id="@+id/imgMaybeline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/roboto"
+                android:text="Bodycare"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imgMaybelline"
+                app:layout_constraintStart_toStartOf="@+id/imgMaybelline"
+                app:layout_constraintTop_toBottomOf="@+id/imgMaybelline" />
+
+            <ImageView
+                android:id="@+id/imgInnisfree"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="hanlderBrand"
+                android:src="@drawable/brand2_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgMaybelline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/roboto"
+
+                android:text="Haircare"
+
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imgInnisfree"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imgInnisfree"
+                app:layout_constraintTop_toBottomOf="@+id/imgInnisfree" />
+
+            <ImageView
+                android:id="@+id/imgMaybelline"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="hanlderBrand"
+
+                android:src="@drawable/brand1_border"
+                app:layout_constraintEnd_toStartOf="@+id/imgInnisfree"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgLoreal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+
+                android:id="@+id/imgLaroche"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="hanlderBrand"
+                android:src="@drawable/brand4_border"
+                app:layout_constraintEnd_toStartOf="@+id/imgLoreal"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvLaroche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/roboto"
+                android:text="La roche"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imgLaroche"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imgLaroche"
+                app:layout_constraintTop_toBottomOf="@+id/imgLaroche" />
+
+            <ImageView
+                android:id="@+id/imgLoreal"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="hanlderBrand"
+
+                android:src="@drawable/brand3_border"
+                app:layout_constraintEnd_toStartOf="@+id/imgMaybelline"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgLaroche"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvLoreal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/roboto"
+                android:text="L'oréal"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imgLoreal"
+                app:layout_constraintStart_toStartOf="@+id/imgLoreal"
+                app:layout_constraintTop_toBottomOf="@+id/imgLoreal" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/txvHotTrending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="HOT TRENDDING"
+            android:textColor="@color/color_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutFamousItem" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/design_trendbanner1"
+            android:padding="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvHotTrending">
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="showItems1"
+                android:src="@drawable/trend2_border"
+                app:layout_constraintEnd_toStartOf="@+id/imageView20"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView23"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txvtredingMurad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+
+                android:text="Murard"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imageView21"
+                app:layout_constraintStart_toStartOf="@+id/imageView21"
+                app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="đ415.000"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/txvtredingMurad"
+                app:layout_constraintStart_toStartOf="@+id/txvtredingMurad"
+                app:layout_constraintTop_toBottomOf="@+id/txvtredingMurad" />
+
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="showItems"
+                android:src="@drawable/trend1_border"
+                app:layout_constraintEnd_toStartOf="@+id/imageView21"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+
+                android:text="Innisfree"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imageView23"
+                app:layout_constraintStart_toStartOf="@+id/imageView23"
+                app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="đ215.000"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="showItems"
+                android:src="@drawable/trend3_border"
+                app:layout_constraintEnd_toStartOf="@+id/imageView14"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView21"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvtrendingCerave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+
+                android:text="Cerave"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintStart_toStartOf="@+id/imageView20"
+                app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="đ415.000"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/txvtrendingCerave"
+                app:layout_constraintStart_toStartOf="@+id/txvtrendingCerave"
+                app:layout_constraintTop_toBottomOf="@+id/txvtrendingCerave" />
+
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="showItems"
+                android:src="@drawable/trend4_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView20"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvtrendingOlbagi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="Cerave"
+
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/imageView14"
+                app:layout_constraintStart_toStartOf="@+id/imageView14"
+                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+
+                android:text="đ505.000"
+                android:textColor="@color/color_main"
+                app:layout_constraintEnd_toEndOf="@+id/txvtrendingOlbagi"
+                app:layout_constraintStart_toStartOf="@+id/txvtrendingOlbagi"
+                app:layout_constraintTop_toBottomOf="@+id/txvtrendingOlbagi" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layouthome2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/nav_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvSanphamHome"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@color/color_main"
+                android:gravity="center"
+                android:text="SẢN PHẨM"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txvDealHome"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@color/color_sub"
+                android:gravity="center"
+                android:text="DEALS"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHomeSp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHomeDeal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layouthome3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/nav_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/design_trendbanner"
+                    android:gravity="center"
+                    android:text="Tất cả"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/design_trendbanner2"
+                    android:gravity="center"
+                    android:text="Phần mắt"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/design_trendbanner2"
+                    android:gravity="center"
+                    android:text="Kem nền"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txvbolochome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/design_square"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:onClick="boLoc"
+                    android:text="Bộ lọc"
+                    android:textColor="@color/color_main" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/design_square"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Sắp xếp"
+                    android:textColor="@color/color_main" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutdoihienthi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/design_square">
+
+                <TextView
+                    android:id="@+id/txvdoihienthi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:onClick="doihienthi"
+                    android:text="Đổi hiển thị"
+                    android:textColor="@color/color_main" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerBoloc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layouthome4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Danh mục"
+                android:textColor="@color/color_main"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/layoutchamsoccothe"
+                android:layout_width="140dp"
+                android:layout_height="196dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/design_border"
+                android:onClick="clickdanhmuc"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/layoutmyphamtrangdiem"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView110">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/skincare" />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/design_trendbanner"
+
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Chăm sóc cơ thể"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutmyphamtrangdiem"
+                android:layout_width="140dp"
+                android:layout_height="196dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/design_border"
+                android:onClick="clickdanhmuc"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/layoutchamsoccothe"
+                app:layout_constraintTop_toBottomOf="@+id/textView110">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/powder" />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/design_trendbanner"
+
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Mỹ phẩm trang điểm"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutchamsocdamat"
+                android:layout_width="140dp"
+                android:layout_height="196dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/design_border"
+                android:onClick="clickdanhmuc"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/layoutchamsoctoc"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutchamsoccothe">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cream" />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/design_trendbanner"
+                    android:fontFamily="@font/roboto_bold"
+
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Chăm sóc da mặt"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutchamsoctoc"
+                android:layout_width="140dp"
+                android:layout_height="196dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/design_border"
+                android:onClick="clickdanhmuc"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/layoutchamsocdamat"
+                app:layout_constraintTop_toBottomOf="@+id/layoutmyphamtrangdiem">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/skincare" />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/design_trendbanner"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="chăm sóc tóc"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_home"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <ImageView
+        android:id="@+id/imgAnh"
+        android:onClick="moMayAnh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/edtSearch"
+        app:layout_constraintTop_toTopOf="@+id/edtSearch"
+        app:srcCompat="@drawable/ic_outline_photo_camera_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shoppingapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/phan"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShoppingApp">
+        <activity
+            android:name=".Boloctimkiem"
+            android:exported="false" />
+        <activity
+            android:name=".Themtaikhoannganhanglienket"
+            android:exported="false" />
+        <activity
+            android:name=".Thanhtoanthanhcong"
+            android:exported="false" />
+        <activity
+            android:name=".ChangPasswordAcitvity"
+            android:exported="false" />
+        <activity
+            android:name=".DahoanthanhActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DanggiaohangAcitvity"
+            android:exported="false" />
+        <activity
+            android:name=".ChoxacnhanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Authenticbanking"
+            android:exported="false" />
+        <activity
+            android:name=".DonHangChoXacNhanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ThanhtoanAcitvity"
+            android:exported="true" />
+        <activity
+            android:name=".AddItemtoCartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DetailPictureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LibaryCamera"
+            android:exported="true" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VoucherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AssociateBankingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VCBPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeliveryAdressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DocumentAcountActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AccountAcitvity"
+            android:exported="true" />
+        <activity
+            android:name=".ItemDetailActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".ItemDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TrendingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityPromote"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SuccessSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuthenticActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

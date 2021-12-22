@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".TrendingActivity">
+
+    <TextView
+        android:id="@+id/txvXuhuong"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/desgin_edittext"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Xu hướng"
+        android:textColor="@color/color_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutCategoryTrending"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txvXuhuong">
+
+        <TextView
+            android:id="@+id/txvTatcaTrending"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/design_trendbanner"
+            android:gravity="center"
+            android:onClick="tatcaTrending_Function"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Tất cả"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txvReviewTrending"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/design_trendbanner2"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:onClick="reviewTrending_Function"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Review"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:onClick="camNangFunction"
+            android:id="@+id/txvCamnangTrending"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/design_trendbanner2"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Cẩm nang"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/design_trendbanner2"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Skincare"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTatcaTrending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCategoryTrending"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgChamsocda"
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chamsocda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Hướng dẫn quy trình chăm sóc da đùng chuẩn"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgChamsocda" />
+
+        <TextView
+            android:id="@+id/txvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:lineSpacingMultiplier="1.5"
+            android:text="Bạn là người yêu thích skincare nhưng da của bạn lại don't care nguyên nhân do đâu?Bạn là một người lười skincare, đâu là giải pháp cho bạn?"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvTitle" />
+
+        <ImageView
+            android:id="@+id/imgSon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/son"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvContent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/txvContentSon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/roboto_bold"
+            android:lineSpacingMultiplier="1.5"
+            android:text="Những mẫu son đang được các nàng \n săn đón"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgSon"
+            app:layout_constraintTop_toTopOf="@+id/imgSon" />
+
+        <ImageView
+            android:id="@+id/imgcalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_calendar_today_24"
+            app:layout_constraintStart_toStartOf="@id/txvContentSon"
+            app:layout_constraintTop_toBottomOf="@id/txvContentSon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="04/11/2021"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgcalendar"
+            app:layout_constraintStart_toEndOf="@id/imgcalendar" />
+
+        <ImageView
+            android:id="@+id/imgTebaochet"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/tebaochet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgSon" />
+
+        <TextView
+            android:id="@+id/txvtebaochet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:lineSpacingMultiplier="1.5"
+            android:text="Tế bào chết cho ra mặt? Bạn đang \n  chăm sóc da đúng cách chưa?"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/txvContentSon"
+            app:layout_constraintTop_toTopOf="@id/imgTebaochet" />
+
+        <ImageView
+            android:id="@+id/imgcalendar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_calendar_today_24"
+            app:layout_constraintStart_toStartOf="@id/txvtebaochet"
+            app:layout_constraintTop_toBottomOf="@id/txvtebaochet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="14/11/2000"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/imgcalendar2"
+            app:layout_constraintStart_toEndOf="@id/imgcalendar2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutReviewTrending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCategoryTrending">
+
+        <ImageView
+            android:id="@+id/imgReviewbanner"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/creamreview"
+            app:layout_constraintDimensionRatio="w,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvTitleReview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Sữa rửa mặt hàn quốc loại nào tốt?"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgReviewbanner" />
+
+        <TextView
+            android:id="@+id/txvContentReview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto"
+            android:text="Top những sữa rửa mặt Hàn quốc ưa chuộng tại VN"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvTitleReview" />
+
+        <ImageView
+            android:id="@+id/imgcalendar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_calendar_today_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvContentReview" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="12/11/2021"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgcalendar3"
+            app:layout_constraintStart_toEndOf="@id/imgcalendar3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        tools:visibility="gone"
+        android:id="@+id/layoutCamnang"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/nav_trend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCategoryTrending"
+        app:layout_constraintVertical_bias="0.0"
+       >
+
+        <ImageView
+            android:id="@+id/imageView33"
+            android:layout_width="0dp"
+            android:layout_height="141dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/son1"
+            tools:layout_editor_absoluteY="145dp" />
+
+        <TextView
+            android:id="@+id/textView121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Review kem nền cho da mặt đình đám"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView33"
+            app:layout_constraintTop_toBottomOf="@+id/imageView33" />
+
+
+        <TextView
+            android:id="@+id/textView127"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:lineSpacingMultiplier="1.25"
+            android:text="Kem nền dày hơn và nhiều dưỡng chất nên nó là lớp nền tuyệt vời cho da khô. Kem nền này có tác dụng dưỡng ẩm và cung cấp độ che phủ cao với lớp nền mỏng như sương. "
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView121" />
+
+        <ImageView
+            android:id="@+id/imageView50"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView127"
+            app:srcCompat="@drawable/trend1_border" />
+
+        <TextView
+            android:id="@+id/textView128"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Review 5 loại mặt nạ đất sét đình đám"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView50"
+            app:layout_constraintTop_toTopOf="@+id/imageView50" />
+
+        <ImageView
+            android:id="@+id/imageView52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/textView128"
+            app:layout_constraintTop_toBottomOf="@+id/textView128"
+            app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+
+        <TextView
+            android:id="@+id/textView129"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="19/08/2021"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView52"
+            app:layout_constraintStart_toEndOf="@+id/imageView52"
+            app:layout_constraintTop_toTopOf="@+id/imageView52" />
+
+        <ImageView
+            android:id="@+id/imageView53"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView50"
+            app:layout_constraintTop_toBottomOf="@+id/imageView50"
+            app:srcCompat="@drawable/phannen" />
+
+        <TextView
+            android:id="@+id/textView130"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Nguyên tắc dùng phấn nước mà \n các bạn nữ cần biết"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView53"
+            app:layout_constraintTop_toTopOf="@+id/imageView53" />
+
+        <ImageView
+            android:id="@+id/imageView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="@+id/textView130"
+            app:layout_constraintTop_toBottomOf="@+id/textView130"
+            app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+
+        <TextView
+            android:id="@+id/textView131"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/roboto"
+            android:text="21/11/2021"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView54"
+            app:layout_constraintStart_toEndOf="@+id/imageView54"
+            app:layout_constraintTop_toTopOf="@+id/imageView54"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_trend"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
